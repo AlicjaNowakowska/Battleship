@@ -1,0 +1,23 @@
+function s=zaznacz_sobie_naokolo_komputer_bd_zgadywac_lepiej(strzelanie_komputera,statki_gracza,index1,index2)
+s=strzelanie_komputera;
+try
+    if(statki_gracza(index1,index2-1)<=0)
+        s(index1,index2-1)=-1;
+    end
+end
+try
+    if(statki_gracza(index1,index2+1)<=0)
+        s(index1,index2+1)=-1;
+    end
+end
+try
+    if(statki_gracza(index1+1,index2)<=0)
+        s(index1+1,index2)=-1;
+    end
+end
+try
+    if(statki_gracza(index1-1,index2)<=0)
+        s(index1-1,index2)=-1;
+    end
+end
+end
